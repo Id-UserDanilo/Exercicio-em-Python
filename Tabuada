@@ -1,0 +1,15 @@
+def tabuada():
+    n1 = int(input('Insira a tabuada que deseja ver : '))
+
+
+    x = 0
+
+
+
+    while x < 10:
+        x = x + 1 #contador
+    
+        print(n1 , " x " , x , "  = " , n1*x)
+
+tabuada()
+
