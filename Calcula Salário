@@ -1,0 +1,63 @@
+#Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. 
+#Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 
+#8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+#A) salário bruto.
+#B) quanto pagou ao INSS.
+#C) quanto pagou ao sindicato.
+#D) salário líquido.
+#E) calcule os descontos e o salário líquido, conforme a tabela abaixo:
+
+def vazio(): #Cria um espaço entre as linhas
+    print(             )
+vazio()
+
+def space(): #Cria uma linha entre os espaços
+    print("----------------------------")
+space()
+
+
+
+def salario_bruto():
+    
+    ganha_hora = float(input('Quanto você ganha por hora? '))
+    
+    horas_trabalhadas_dia = float(input('Quantas horas você trabalha por mês ? '))
+    
+    #Inicia calculos de (SALARIO BRUTO, INSS, SINDICATO e SALARIO LIQUIDO)
+    
+    salario_bruto = ganha_hora * horas_trabalhadas_dia
+    
+    imposto_renda = salario_bruto * 0.11
+    
+    inss = salario_bruto * 0.8
+    
+    sindicato = salario_bruto * 0.5
+    
+    desconto = imposto_renda + inss + sindicato
+    
+    salario_liquido = desconto - salario_bruto
+    #Fecha Calculos
+    
+    #Cria tabela de exibição das informações acima
+    space()
+    
+    print("+ Salário Bruto : R$ %s " %salario_bruto)
+    
+    vazio()
+    
+    print("- Imposto de renda : R$ %s " %imposto_renda) #Descontando 11%
+    
+    vazio()
+    
+    print("- INSS : R$ %s" %inss) #Descontando 8%
+    
+    vazio()
+    
+    print(" - Sindicato : R$  %s" %sindicato) #Descontando 5%
+    
+    vazio()
+    
+    print("= Salário Liquido : R$ %s " %salario_liquido )
+    #Fecha tabela
+    space() 
+salario_bruto()   
